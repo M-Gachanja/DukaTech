@@ -1,3 +1,4 @@
+//HomePage.jsx
 import React, { useState, useEffect } from 'react';
 import './HomePage.css'; 
 import slide1 from '../assets/img1.png';
@@ -45,7 +46,7 @@ function HomePage() {
     <>
       <nav>
         <ul>
-          <li><img src="https://via.placeholder.com/150" alt="Logo" /></li>     
+               
           <h2><b>DukaTech</b></h2>               
           <li><Link to="/">Home</Link></li>
           <li 
@@ -62,7 +63,7 @@ function HomePage() {
               </ul>
             )}
           </li>
-          <li><Link to="/about">About</Link></li>
+          <li><a href="/about-section">About</a></li>
           <li><Link to="/login">POS System</Link></li>
         </ul>
       </nav>
@@ -80,7 +81,7 @@ function HomePage() {
           <div className="hero-content">
             <h1>Welcome to DukaTech</h1>
             <p>Your one-stop solution for all tech needs.</p>
-            <button>Get Started</button>
+            
           </div>
           
           <div className="slideshow-dots">
