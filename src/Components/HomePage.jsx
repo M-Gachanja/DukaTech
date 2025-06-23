@@ -57,14 +57,14 @@ function HomePage() {
             <a href="#services">Services ▾</a>
             {showServices && (
               <ul className="dropdown">
-                <li><a href="/pos">Point of Sale</a></li>
-                <li><a href="/audit">Audit Services</a></li>
-                <li><a href="/etr">ETR Services</a></li>
+                <li><a href="#services">Point of Sale</a></li>
+                <li><a href="#services">Audit Services</a></li>
+                <li><a href="#services">ETR Services</a></li>
               </ul>
             )}
           </li>
           <li><a href="#about">About</a></li>
-          <li><Link to="/login">POS System</Link></li>
+          <li><Link to="/login">Add Business</Link></li>
         </ul>
       </nav>
       
@@ -106,7 +106,7 @@ function HomePage() {
           </p>
         </div>
       </section>
-      <section className="services-section">
+      <section id='services' className="services-section">
         <div className="section-header">
           <h2>Our Services</h2>
           <p>Comprehensive solutions tailored to your business needs</p>
