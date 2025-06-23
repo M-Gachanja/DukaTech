@@ -153,7 +153,6 @@ nav ul {
   flex-direction: column;
   padding: 0;
   background-color: #0077b6;
-  transparent: rgba(0, 0, 0, 0.1);
 }
 
 .dropdown li {
