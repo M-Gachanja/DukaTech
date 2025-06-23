@@ -1,6 +1,6 @@
 //HomePage.jsx
 import React, { useState, useEffect } from 'react';
-import './HomePage.css'; 
+import './Homepage.css'; 
 import slide1 from '../assets/img1.png';
 import slide2 from '../assets/img2.png';
 import slide3 from '../assets/img3.png';
