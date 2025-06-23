@@ -9,14 +9,14 @@ function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [showServices, setShowServices] = useState(false);
   
-  // Slideshow images
+  
   const slides = [
     slide1,
     slide2,
     slide3
   ];
 
-  // Auto-advance slides
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -63,7 +63,7 @@ function HomePage() {
               </ul>
             )}
           </li>
-          <li><a href="/about-section">About</a></li>
+          <li><a href="#about">About</a></li>
           <li><Link to="/login">POS System</Link></li>
         </ul>
       </nav>
@@ -95,7 +95,7 @@ function HomePage() {
           </div>
         </div>
       </div>
-      <section className="about-section">
+      <section id='about' className="about-section">
         <div className="about-container">
           <h2>About DukaTech</h2>
           <p>

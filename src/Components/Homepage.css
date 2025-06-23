@@ -112,7 +112,7 @@ nav a {
 .dot.active {
   background-color: white;
 }
-/* Add these to your existing HomePage.css */
+
 
 nav ul {
   list-style-type: none;
@@ -141,23 +141,22 @@ nav ul {
 }
 
 .dropdown {
-  position: relative;
-  display: none; 
+  position: absolute;          
+  top: 100%;                    
   left: 0;
-  
-  min-width: 200px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  border-radius: 0 0 5px 5px;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
-  padding: 0;
   background-color: #0077b6;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  padding: 0;
+  min-width: 200px;
+  z-index: 1000;                /* ✅ Ensure it's above other elements */
 }
 
 .dropdown li {
-  padding: 0;
-  margin: 0;
+ list-style: none;
+  
 }
 
 .dropdown a {
@@ -169,10 +168,10 @@ nav ul {
 }
 
 .dropdown a:hover {
-  background-color: #0077b6;
+  background-color: #023e8a;
 }
 
-/* For mobile responsiveness (optional) */
+
 @media (max-width: 768px) {
   .services-menu {
     position: static;
@@ -184,7 +183,11 @@ nav ul {
     box-shadow: none;
   }
 }
-/* About Section Styles */
+.services-menu:hover .dropdown {
+  display: flex;
+}
+
+
 .about-section {
   padding: 4rem 2rem;
   background-color: #f9f9f9;
