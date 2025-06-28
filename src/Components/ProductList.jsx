@@ -14,6 +14,14 @@ const ProductList = ({ products, setProducts, addToCart }) => {
     setForm({ name: '', price: '', quantity: '' });
   };
 
+  const handleDelete = (id) => {
+    const confirmed = window.confirm("Are you sure you want to delete this product?");
+    if (confirmed) {
+      const updatedProducts = products.filter(p => p.id !== id);
+      setProducts(updatedProducts);
+    }
+  };
+
   return (
     <div>
       <h2>Product Management</h2>
@@ -27,6 +35,7 @@ const ProductList = ({ products, setProducts, addToCart }) => {
           <li key={p.id}>
             {p.name} - ${p.price} ({p.quantity} in stock)
             <button disabled={p.quantity <= 0} onClick={() => addToCart(p)}>Add to Cart</button>
+            <button onClick={() => handleDelete(p.id)}>Delete</button>
           </li>
         ))}
       </ul>
