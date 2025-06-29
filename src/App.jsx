@@ -12,7 +12,6 @@ import PrivateRoute from './Components/Shared/PrivateRoute';
 import HomePage from './Components/HomePage';
 import ParticlesBackground from './Components/ParticlesBackground';
 
-// POS Page with wave effect and localStorage logic
 const POSPage = () => {
   const [products, setProducts] = useState(() => {
     return JSON.parse(localStorage.getItem('products')) || [];
@@ -42,7 +41,6 @@ const POSPage = () => {
   return (
     <>
       <ParticlesBackground />
-      {/* Wave animated background */}
       <div className="wave-background">
         <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
           <path
@@ -90,8 +88,6 @@ const POSPage = () => {
     </>
   );
 };
-
-// Main App with routes
 const App = () => {
   return (
     <AuthProvider>

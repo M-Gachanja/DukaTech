@@ -1,5 +1,3 @@
-/* HomePage.css */
-
 nav {
   background-color: #2f5ba3;
   padding: 1rem;
@@ -151,7 +149,7 @@ nav ul {
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   padding: 0;
   min-width: 200px;
-  z-index: 1000;                /* ✅ Ensure it's above other elements */
+  z-index: 1000;
 }
 
 .dropdown li {
@@ -224,7 +222,7 @@ nav ul {
   text-align: center;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
   .about-section {
     padding: 2rem 1rem;
@@ -242,7 +240,7 @@ nav ul {
     font-size: 1rem;
   }
 }
-/* Services Section Styles */
+
 .services-section {
   padding: 4rem 2rem;
   background-color: #ffffff;
@@ -318,8 +316,6 @@ nav ul {
 .learn-more-btn:hover {
   background-color: #023e8a;
 }
-
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .services-section {
     padding: 2rem 1rem;

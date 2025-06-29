@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext'; // Adjust path as needed
+import { useAuth } from '../context/AuthContext';
 
 function Navbar() {
   const [showServices, setShowServices] = useState(false);
@@ -29,7 +29,7 @@ function Navbar() {
           <span>Services ▾</span>
           {showServices && (
             <ul className="dropdown">
-              <li><Link to="/pos">Point of Sale</Link></li>
+              <li><Link to="/login">Point of Sale</Link></li>
               <li><a href="/audit">Audit Services</a></li>
               <li><a href="/etr">ETR Services</a></li>
             </ul>

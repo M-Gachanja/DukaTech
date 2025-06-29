@@ -1,4 +1,3 @@
-//HomePage.jsx
 import React, { useState, useEffect } from 'react';
 import './Homepage.css'; 
 import slide1 from '../assets/img1.png';
@@ -57,7 +56,7 @@ function HomePage() {
             <a href="#services">Services ▾</a>
             {showServices && (
               <ul className="dropdown">
-                <li><a href="#services">Point of Sale</a></li>
+                <li><Link to="/login">Point of Sale</Link></li>
                 <li><a href="#services">Audit Services</a></li>
                 <li><a href="#services">ETR Services</a></li>
               </ul>
