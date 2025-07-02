@@ -81,7 +81,7 @@
     transition: border-color 0.25s;
   }
   button:hover {
-    border-color: #646cff;
+    border-color: #cbb9b7;
   }
   button:focus,
   button:focus-visible {
@@ -163,7 +163,7 @@
   position: relative;
   bottom: 0;
   width: 100%;
-  height: 120px;
+  height: 180px;
   overflow: hidden;
   margin-top: 80px;
   z-index: -1;
@@ -173,7 +173,7 @@
   width: 200%;
   height: 100%;
   display: block;
-  animation: waveDriftFooter 12s linear infinite;
+  animation: waveDriftFooter 5s linear infinite;
 }
 @keyframes waveDrift {
   0% { transform: translateX(0); }
