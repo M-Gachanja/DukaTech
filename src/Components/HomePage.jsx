@@ -43,8 +43,8 @@ function HomePage() {
 
   return (
     <>
-      <nav>
-        <ul>
+      <nav className="navbar">
+        <ul className="nav-links">
                
           <h2><b>DukaTech</b></h2>               
           <li><Link to="/">Home</Link></li>

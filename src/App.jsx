@@ -11,6 +11,7 @@ import Auth from './Components/Auth/Auth';
 import PrivateRoute from './Components/Shared/PrivateRoute';
 import HomePage from './Components/HomePage';
 import ParticlesBackground from './Components/ParticlesBackground';
+import Profile from './Components/Profile';
 
 const POSPage = () => {
   const [products, setProducts] = useState(() => {
@@ -100,6 +101,14 @@ const App = () => {
             element={
               <PrivateRoute>
                 <POSPage />
+              </PrivateRoute>
+            }
+          />
+            <Route
+            path="/profile"
+            element={
+              <PrivateRoute>
+                <Profile />
               </PrivateRoute>
             }
           />

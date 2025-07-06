@@ -1,11 +1,11 @@
-nav {
+.navbar {
   background-color: #2f5ba3;
   padding: 1rem;
   justify-content: space-between;
   width: 100%;
 }
 
-nav ul {
+.nav-links {
   list-style-type: none;
   display: flex;
   align-items: center;
@@ -112,7 +112,7 @@ nav a {
 }
 
 
-nav ul {
+.nav-links {
   list-style-type: none;
   display: flex;
   align-items: center;

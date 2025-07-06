@@ -104,7 +104,8 @@
     background-color: #0a0a23;
     color: #ffffff;
     padding: 30px 20px;
-    margin-top: 50px;
+    
+    
   }
   
   .footer-content {
@@ -189,4 +190,28 @@
   top: 0;
   left: 0;
   z-index: -2;
+}
+.profile-page {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.profile-page input {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 10px;
+}
+
+.profile-page button {
+  padding: 10px 20px;
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }

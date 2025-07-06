@@ -1,26 +1,26 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import './Navbar.css';
+import { FaUserCircle } from 'react-icons/fa';
 
 function Navbar() {
   const [showServices, setShowServices] = useState(false);
   const { currentUser, logout } = useAuth();
+  const navigate = useNavigate();
 
-  const handleLogout = async () => {
-    try {
-      await logout();
-    } catch (err) {
-      console.error('Logout error:', err);
-    }
+  const handleLogout = () => {
+    logout();
+    navigate('/');
   };
 
   return (
     <nav>
       <ul>
-        
         <h2><b>DukaTech</b></h2>
 
         <li><Link to="/">Home</Link></li>
+
         <li
           className="services-menu"
           onMouseEnter={() => setShowServices(true)}
@@ -28,18 +28,30 @@ function Navbar() {
         >
           <span>Services ▾</span>
           {showServices && (
-            <ul className="dropdown">
-              <li><Link to="/login">Point of Sale</Link></li>
-              <li><a href="/audit">Audit Services</a></li>
-              <li><a href="/etr">ETR Services</a></li>
+            <ul className="dropdown_nav">
+              <li><a href="/#audit">Audit Services</a></li>
+              <li><a href="/#etr">ETR Services</a></li>
             </ul>
           )}
         </li>
-        <li><Link to="/about">About</Link></li>
+
+        <li><a href="/#about">About</a></li>
 
         {currentUser ? (
           <>
-            <li><span style={{ color: 'white' }}>Hello, {currentUser.email}</span></li>
+            <li>
+              <Link to="/profile" className="user-icon-link">
+                {currentUser.photoURL ? (
+                  <img
+                    src={currentUser.photoURL}
+                    alt="Profile"
+                    className="profile-img"
+                  />
+                ) : (
+                  <FaUserCircle className="fallback-icon" />
+                )}
+              </Link>
+            </li>
             <li><button onClick={handleLogout}>Logout</button></li>
           </>
         ) : (
